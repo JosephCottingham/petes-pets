@@ -13,6 +13,7 @@ const methodOverride = require('method-override')
 
 const app = express();
 
+
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/petes-pets');
 
@@ -53,5 +54,8 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+
 
 module.exports = app;
